@@ -1,3 +1,5 @@
+//Created by Arthur James (Arti_Djeims)
+
 //Checking the link
 if (gistId && fileName) {
     console.log('%c \n' +
