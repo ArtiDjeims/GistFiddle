@@ -2,6 +2,8 @@
 
 GistFiddle is a small JavaScript library that allows you to load and run Gists online.
 
+Visit [GistFiddle Website](http://gistfiddle.online/)
+
 This repo contains:
   - GistFiddle.js - Our JS Framework
   - GistFiddle Website - Our platform where you can run and test gists online
