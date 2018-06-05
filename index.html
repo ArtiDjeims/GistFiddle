@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GistFiddle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="keywords" content="GistFiddle, Run Gist Online, Gists Online, GitHub, Gist, Fiddle,"/>
+    <meta name="description" content="GistFiddle"/>
+    <link href="https://fonts.googleapis.com/css?family=Jua|Raleway" rel="stylesheet">
+    <link href="gist/css/home.css" rel="stylesheet">
+</head>
+<body>
+<div class="content">
+    <div class="logo">GistFiddle</div>
+    <div class="info">
+        Run Gists Online
+    </div>
+    <input id="gist" type="text" placeholder="Gist Id (hash from link)">
+    <input id="file" type="text" placeholder="File name (file.js)" name="fileName" autocomplete="on">
+    <button onclick="run()" class="runButton">Run</button>
+</div>
+<div class="box">
+    <div class="block lastGist">
+        <div class="block-heading">
+            Open your latest Gist
+        </div>
+        <button class="block-button" onclick="openLastGist()">Open</button>
+    </div>
+    <div class="block newGist">
+        <div class="block-heading">
+            Create new<br> Gist
+        </div>
+        <button class="block-button" onclick="createNewGist()">Create</button>
+    </div>
+    <div class="block aboutBlock">
+        <div class="block-heading">
+            About<br> GistFiddle
+        </div>
+        <button class="block-button">Explore</button>
+    </div>
+</div>
+<br><br>
+<script>
+    function run() {
+        let gist = document.getElementById("gist").value;
+        let file = document.getElementById("file").value;
+        window.location = `gist/sandbox/index.html?gist=${gist}&file=${file}`;
+    }
+
+    function openLastGist() {
+        let lastGist = localStorage.getItem('gist');
+        let lastFile = localStorage.getItem('file');
+        if (lastGist && lastFile) {
+            window.location = `gist/sandbox/index.html?gist=${lastGist}&file=${lastFile}`;
+        } else {
+            alert("You haven't open any Gists lately!")
+        }
+    }
+
+    function createNewGist() {
+        window.open('https://gist.github.com/', '_blank');
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GistFiddle SandBox</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="GistFiddle SandBox" />
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.2.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.2/mode/javascript/javascript.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.2/mode/xml/xml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.2/mode/css/css.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.2/mode/htmlmixed/htmlmixed.js"></script>
+    <script src="https://codemirror.net/2/lib/util/formatting.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.2.0/codemirror.min.css" rel="stylesheet">
+
+    <link href="../css/sandbox.css" rel="stylesheet">
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0&appId=435862536875987&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div class="menu" id="menu">
+</div>
+<div class="sandbox" id="sandbox">
+    <div class="remix" id="remix">
+        <span class="left">Editing Mode</span>
+        <button class="remixCodeBut right" onclick="remix()">Remix</button>
+    </div>
+    <div class="code" id="code"></div>
+    <div id="sandboxFrame" class="sandboxFrame">SandBox</div>
+</div>
+<script src="../../GistFiddle.js"></script>
+<script src="../js/url.js"></script>
+<script src="../js/moment.min.js"></script>
+<script src="../js/sandbox.js"></script>
+</body>
+</html>

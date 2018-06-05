@@ -1,0 +1,22 @@
+{
+  "name": "Example Project",
+  "description": "created by GistFiddle",
+  "version": "1.0",
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
+  "browser_action": {
+    "default_title": "Open",
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "logo.png",
+    "48": "logo.png",
+    "128": "logo.png"
+  },
+  "manifest_version": 2
+}
+//Icons by Alpár-Etele Méder (https://www.iconfinder.com/pocike) licensed under Creative Commons (Attribution 3.0 Unported)

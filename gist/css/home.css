@@ -1,0 +1,117 @@
+body {
+    margin: 0 auto;
+    font-family: 'Jua', sans-serif;
+    color: #555;
+    background: #f3f4f5;
+}
+
+.content {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.logo {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.info {
+    margin-bottom: 80px;
+}
+
+input {
+    padding: 8px 24px;
+    border-radius: 4px;
+    border: 0;
+    margin-left: 10px;
+    color: #ac98ef;
+    outline: 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+}
+
+.runButton {
+    display: inherit;
+    margin: 0 auto;
+    margin-top: 35px;
+    padding: 7px 28px;
+    border: 0;
+    background: none;
+    color: white;
+    background-color: #ac98ef;
+    border-radius: 3px;
+    font-size: 14px;
+    cursor: pointer;
+    outline: 0;
+}
+
+.box {
+    width: 73%;
+    display: grid;
+    grid-template-columns: 24% 24% 48%;
+    grid-gap: 18px;
+    margin: 0 auto;
+    margin-top: 120px;
+}
+
+.block {
+    height: 340px;
+    background: lightgray;
+    border-radius: 7px;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+}
+
+.lastGist {
+    background-image: url(https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=42e5d101cfbd8c2a94f7b897524bbc18&auto=format&fit=crop&w=968&q=80);
+    color: white;
+}
+
+.newGist {
+    background-image: url(https://images.unsplash.com/photo-1523038379513-1267e1c5669a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8fa369f2005cbd25ac4c7f5ddc983867&auto=format&fit=crop&w=716&q=80);
+    color: white;
+}
+
+.aboutBlock {
+    background-image: url(https://images.unsplash.com/photo-1502872364588-894d7d6ddfab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fad3718010b26ab3aaac8b5a0613cfaf&auto=format&fit=crop&w=1350&q=8);
+    color: white;
+}
+
+.block-heading {
+    padding: 35px 30px;
+    font-size: 24px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.block-button {
+    position: absolute;
+    left: 30px;
+    bottom: 20px;
+    display: block;
+    padding: 9px 28px;
+    background: #ffffffeb;
+    border: 0;
+    border-radius: 6px;
+    font-size: 15px;
+    outline: 0;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Mobile */
+@media screen and (max-width: 1000px) {
+    .box {
+        grid-template-columns: 100%;
+    }
+
+    input {
+        margin-bottom: 15px;
+    }
+
+    .content {
+        width: 100%;
+    }
+}

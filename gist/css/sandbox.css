@@ -1,0 +1,198 @@
+body {
+    margin: 0 auto;
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: #f3f4f5;
+}
+
+.menu {
+    color: white;
+    float: left;
+    width: 28%;
+    height: 100vh;
+    background: #2a3948;
+    text-align: left;
+    position: fixed;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.menu::-webkit-scrollbar {
+    width: 5px;
+    background-color: #F5F5F5;
+}
+
+.menuContent {
+    padding: 10%;
+    min-height: 50vh;
+    box-sizing: border-box;
+}
+
+.commentsArea {
+    width: 100%;
+    background: white;
+    margin-top: 20px;
+    padding: 5% 2%;
+    box-sizing: border-box;
+    border-right: 1px solid #dcdcdc;
+}
+
+.commentsBlock {
+    width: 90%;
+    margin: 0 auto;
+    min-height: 60vh;
+}
+
+.sandbox {
+    float: right;
+    width: 72%;
+}
+
+.frame {
+    width: 100%;
+    height: 100vh;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -o-border-radius: 12px;
+}
+
+.note {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.code {
+    float: right;
+    width: 100%;
+    height: auto;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.remix {
+    width: 100%;
+    height: 65px;
+    box-sizing: border-box;
+    padding: 20px 40px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.realTimeBlock {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.CodeMirror {
+    height: 50vh;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.sandboxFrame {
+    padding: 20px;
+}
+
+.logo {
+    font-size: 23px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.avatar {
+    width: 80px;
+    border-radius: 50%;
+}
+
+.name {
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.file {
+    margin-top: 20px;
+    color: #3fc346;
+    cursor: pointer;
+}
+
+.updates {
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.language {
+    margin-top: 20px;
+}
+
+.actions {
+    justify-content: left;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+button {
+    background: #0055f8;
+    padding: 6px 24px;
+    border: 0;
+    border-radius: 3px;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    outline: 0;
+}
+
+.fullPageBut {
+    margin-top: 25px;
+}
+
+.hideCodeBut {
+    background: #a458d2;
+    margin-left: 15px;
+    margin-top: 25px;
+}
+
+.remixCodeBut {
+    background: #5bd281;
+}
+
+.downloadCodeBut {
+    background: #7518ff;
+    margin-left: 20px;
+}
+
+/* Mobile */
+@media screen and (max-width: 1000px) {
+    .menu {
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 50vh;
+        text-align: center;
+    }
+
+    .sandbox {
+        width: 100%;
+    }
+
+    .actions {
+        justify-content: center;
+    }
+
+    .remix {
+        height: 90px;
+    }
+
+    .downloadCodeBut {
+        margin-left: 0;
+        margin-top: 7px;
+    }
+
+    .remixActions {
+        max-width: 50%;
+    }
+}
