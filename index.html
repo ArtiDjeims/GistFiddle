@@ -46,31 +46,10 @@
         <div class="block-heading">
             About<br> GistFiddle
         </div>
-        <button class="block-button">Explore</button>
+        <button class="block-button" onclick="aboutGistFiddle()">Explore</button>
     </div>
 </div>
 <br><br>
-<script>
-    function run() {
-        let gist = document.getElementById("gist").value;
-        let file = document.getElementById("file").value;
-        window.location = `gist/sandbox/index.html?gist=${gist}&file=${file}`;
-    }
-
-    function openLastGist() {
-        let lastGist = localStorage.getItem('gist');
-        let lastFile = localStorage.getItem('file');
-        if (lastGist && lastFile) {
-            window.location = `gist/sandbox/index.html?gist=${lastGist}&file=${lastFile}`;
-        } else {
-            alert("You haven't open any Gists lately!")
-        }
-    }
-
-    function createNewGist() {
-        window.open('https://gist.github.com/', '_blank');
-    }
-
-</script>
+<script src="gist/js/homePage.js"></script>
 </body>
 </html>
