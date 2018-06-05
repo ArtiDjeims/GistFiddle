@@ -66,17 +66,17 @@ input {
 }
 
 .lastGist {
-    background-image: url(https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=42e5d101cfbd8c2a94f7b897524bbc18&auto=format&fit=crop&w=968&q=80);
+    background-image: url(../img/1.jpeg);
     color: white;
 }
 
 .newGist {
-    background-image: url(https://images.unsplash.com/photo-1523038379513-1267e1c5669a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8fa369f2005cbd25ac4c7f5ddc983867&auto=format&fit=crop&w=716&q=80);
+    background-image: url(../img/2.jpeg);
     color: white;
 }
 
 .aboutBlock {
-    background-image: url(https://images.unsplash.com/photo-1502872364588-894d7d6ddfab?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=fad3718010b26ab3aaac8b5a0613cfaf&auto=format&fit=crop&w=1350&q=8);
+    background-image: url(../img/3.jpeg);
     color: white;
 }
 
