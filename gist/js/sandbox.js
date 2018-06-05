@@ -58,7 +58,7 @@ menu.innerHTML = `
     </div>
     <div class="commentsArea">
     <div class="commentsBlock">
-    <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-numposts="5" data-width="100%" 	
+    <div class="fb-comments" data-numposts="5" data-width="100%" 	
 data-colorscheme="light"></div>
 </div>
     </div>
