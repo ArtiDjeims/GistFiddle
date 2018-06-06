@@ -44,7 +44,7 @@ To get a data from a Gist simply use:
 ```javascript
 gist.load("<id>");
 ```
-Note: replace **<id>** with your Gist Id
+Note: replace "id" with your Gist Id
 From that point, you will be able to call the "**data**" variable:
 
 ```javascript
@@ -64,7 +64,7 @@ To run a Gist online, simply use:
 ```javascript
 gist.run("<id>", "<fileName>");
 ```
-Note: replace **<id>** with your Gist Id and **<fileName>** with your file name.
+Note: replace "id" with your Gist Id and "fileName" with your file name.
 
 You can also load the whole page using components like this:
 
@@ -81,8 +81,6 @@ MIT, Created by Arthur James (Arti_Djeims)
 
 
 **Free Software, Rocks!**
-
-[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
 
    [GistFiddle.Js]: <https://github.com/ArtiDjeims/GistFiddle/>
