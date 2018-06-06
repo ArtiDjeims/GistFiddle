@@ -110,7 +110,10 @@ function remix() { //Entering Editing Mode
     let remixedCode = cm.getValue();
 
     if (gist.type(fileName) == ".js") {
-        runFrame(`<script>${remixedCode}</script>`);
+        runFrame(`
+            <script src="../GistFiddle.js"></script>
+            <script>${data.files[fileName].content}</script>
+        `);
     } else if (gist.type(fileName) == ".css") {
         runFrame(`<style>${remixedCode}</style>`);
     } else {

@@ -2,8 +2,11 @@
 gist.load(gistId);
 
 if (gistId && fileName) {
-    if (gist.type(fileName) == ".js"){
-        runFrame(`<script>${data.files[fileName].content}</script>`);
+    if (gist.type(fileName) == ".js") {
+        runFrame(`
+            <script src="../GistFiddle.js"></script>
+            <script>${data.files[fileName].content}</script>
+        `);
     } else if (gist.type(fileName) == ".css") {
         runFrame(`<style>${data.files[fileName].content}</style>`);
     } else {
@@ -14,7 +17,7 @@ if (gistId && fileName) {
     window.location = "/";
 }
 
-function runFrame(content){
+function runFrame(content) {
     let iframe = document.getElementById("frame");
     iframe.contentWindow.document.open();
     iframe.contentWindow.document.write(content);
