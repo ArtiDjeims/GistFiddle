@@ -85,7 +85,7 @@ MIT, Created by Arthur James (Arti_Djeims)
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
 
-   [GistFiddle.Js]: <#>
+   [GistFiddle.Js]: <https://github.com/ArtiDjeims/GistFiddle/>
    [jQuery]: <http://jquery.com>
    [CodeMirror]: <https://codemirror.net>
    [MomentJs]: <http://momentjs.com>
