@@ -74,6 +74,13 @@ gist.run("<id>", "<fileName>.html");
 gist.run("<id>", "<fileName>.js");
 ```
 
+To check file file extension use:
+
+```javascript
+gist.type("<fileName>");
+```
+
+
 License
 ----
 
