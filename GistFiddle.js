@@ -26,7 +26,7 @@ let gist = {
     },
     type: (file) => {
         let filePattern = /\.[0-9a-z]{1,5}$/i;
-        if((file).match(filePattern)) {
+        if ((file).match(filePattern)) {
             let fileFormat = (file).match(filePattern)[0];
             return fileFormat;
         }

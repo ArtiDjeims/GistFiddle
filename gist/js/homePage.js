@@ -1,3 +1,4 @@
+//Generating Links
 function run() {
     let gist = document.getElementById("gist").value;
     let file = document.getElementById("file").value;

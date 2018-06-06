@@ -1,5 +1,8 @@
 //Created by Arthur James (Arti_Djeims)
 
+
+/* GistFiddle */
+
 //Checking the link
 if (gistId && fileName) {
     console.log('%c \n' +
@@ -18,6 +21,8 @@ if (gistId && fileName) {
 gist.load(gistId);
 let file = fileName;
 
+
+/* HTML */
 
 //Working with Gist Date
 let utcDate = data.updated_at;
@@ -65,7 +70,9 @@ data-colorscheme="light"></div>
 `;
 
 
-//Code Editor
+/* Code Editor */
+
+//CodeMirror
 var cm = CodeMirror(document.getElementById("code"), {
     value: data.files[file].content,
     mode: "htmlmixed",
@@ -89,48 +96,46 @@ let codeAction = {
 }
 
 
+/* SandBox */
+
 //Loading SandBox
 codeAction.hide();
 sandbox.innerHTML = `<iframe class="frame" frameborder="no" scrolling="no" src="../index.html?gist=${gistId}&file=${fileName}"></iframe>`;
 
 
-//Remix Code
+//Remixing Code
 let realtime = false;
 
-function remix() {
+function remix() { //Entering Editing Mode
     let remixedCode = cm.getValue();
-    let pattern = /html>(.*)<\/html>/mis;
-    let editingMode = true;
-    if ((remixedCode).match(pattern)) { //Check for HTML page in code
-        let note = confirm("Note: Inserting an HTML page inside another HTML page, might not work as expected!");
-        if (note == true) {
-            editingMode = true;
-        } else {
-            editingMode = false;
-        }
+
+    if (gist.type(fileName) == ".js") {
+        runFrame(`<script>${remixedCode}</script>`);
+    } else if (gist.type(fileName) == ".css") {
+        runFrame(`<style>${remixedCode}</style>`);
+    } else {
+        runFrame(remixedCode);
     }
 
-    if (editingMode == true) { //Entering Editing Mode
-        if (gist.type(fileName) == ".js") {
-            eval(remixedCode);
-        } else {
-            sandbox.innerHTML = remixedCode;
-            let arr = sandbox.getElementsByTagName('script')
-            for (var n = 0; n < arr.length; n++) {
-                eval(arr[n].innerHTML);
-            }
-        }
-        realtime = true;
-        //Generating Remix menu
-        remixBlock.innerHTML = `
+    remixBlock.innerHTML = `
         <span class="left">Editing Mode</span>
         <div class="remixActions right">
         <div id="realTime" class="realTimeBlock"></div>
         <button class="downloadCodeBut" onclick="download()">Download</button>
         </div>
-        `;
-        playRealtime(); //Entering RealTime Editing Mode
-    }
+        `; //Generating Remix menu
+
+    playRealtime(); //Entering RealTime Editing Mode
+}
+
+function runFrame(content) {
+    sandbox.innerHTML = '';
+    var iframe = document.createElement('iframe');
+    iframe.className = "frame";
+    document.getElementById("sandboxFrame").appendChild(iframe);
+    iframe.contentWindow.document.open();
+    iframe.contentWindow.document.write(content);
+    iframe.contentWindow.document.close();
 }
 
 
@@ -138,13 +143,11 @@ function remix() {
 cm.on("change", function () {
     if (realtime == true) {
         if (gist.type(fileName) == ".js") {
-            eval(cm.getValue());
+            runFrame(`<script>${cm.getValue()}</script>`);
+        } else if (gist.type(fileName) == ".css") {
+            runFrame(`<style>${cm.getValue()}</style>`);
         } else {
-            sandbox.innerHTML = cm.getValue();
-            let arr = sandbox.getElementsByTagName('script')
-            for (var n = 0; n < arr.length; n++) {
-                eval(arr[n].innerHTML);
-            }
+            runFrame(cm.getValue());
         }
     }
 });
@@ -162,6 +165,8 @@ function playRealtime() {
 }
 
 
+/* Downloads */
+
 //Download File
 function downloadFile(filename, text) {
     var element = document.createElement('a');
@@ -177,6 +182,9 @@ function download() {
     downloadFile(fileName, cm.getValue());
 }
 
-//Local Storage
+
+/* Local Storage */
+
+//Saving Gist Id and FileName
 localStorage.setItem('gist', gistId);
 localStorage.setItem('file', fileName);
