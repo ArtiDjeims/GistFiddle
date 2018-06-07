@@ -40,6 +40,21 @@ Means your code is safely hosted on your GitHub profile.
 
 Want to contribute or make your own project? Great!
 
+To run a Gist online, simply use:
+
+```javascript
+gist.run("<id>", "<fileName>");
+```
+Note: replace "id" with your Gist Id and "fileName" with your file name.
+
+You can also load the whole page using components like this:
+
+```javascript
+gist.run("<id>", "<fileName>.css");
+gist.run("<id>", "<fileName>.html");
+gist.run("<id>", "<fileName>.js");
+```
+
 To get a data from a Gist simply use:
 ```javascript
 gist.load("<id>");
@@ -58,23 +73,7 @@ You can also pass Gist data straight into your function:
     }
 ```
 
-
-To run a Gist online, simply use:
-
-```javascript
-gist.run("<id>", "<fileName>");
-```
-Note: replace "id" with your Gist Id and "fileName" with your file name.
-
-You can also load the whole page using components like this:
-
-```javascript
-gist.run("<id>", "<fileName>.css");
-gist.run("<id>", "<fileName>.html");
-gist.run("<id>", "<fileName>.js");
-```
-
-To check file file extension use:
+To check file extension use:
 
 ```javascript
 gist.type("<fileName>");
